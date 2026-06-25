@@ -3,9 +3,9 @@
 
 # Ticket 1
 username = "queen"
-# 4
+# 4 characters are in the handle
 print (len(username))
-# yes len() counted every character and symbols included
+# yes, len() counted every character and symbols included
 
 
 #Ticket 2
@@ -18,36 +18,37 @@ print(username[len(username) - 1])
 #Ticket 3
 print("Welcome to Loop, @" + username + "!")
 print(f"Welcome to Loop, @{username}!")
-# yes both lines will look identical on screen
+# yes, both lines will look identical on screen
 # the concatention was easier because it requires less code
 
 
 #Ticket 4
-#username[0] = "X" #run this, it breaks on purpose
+#username[0] = "X" 
 # Error message: TypeError: 'str' object does not support item assignment
 print(username.upper())
-# for a string, immutable means that once a string is made you cannot change a letter inside it. To change it you build a brand new string
+# it will crash and give an error message
+# for a string, immutable means that once a string is made, you cannot change a letter inside it
 
 
 #Ticket 5
 feed = ["First Post!", "At the gym", "I love my dog!"]
 print(len(feed))
 print(feed[0])
-# The count will be 3 and the "First Post!" caption will print first
+# The count will be 3, and the "First Post!" caption will print first
 # I used index 0
 
 
 #Ticket 6
 feed.append("Loving this weather")
-# The index is 3
-# Since python starts counting at 0, the fourth post has the index of3
+# The index will be 3
+# Since python starts counting at 0, the fourth post has the index of 3
 
 
 #Ticket 7
 feed.pop(0)
 feed.sort()
 print(feed)
-# The post that was at index 0 gets removed and the rest are in alphabetical order
+# The post that was at index 0 will be removed, and the rest will be in alphabetical order
 # .pop(0) removed what was in idex 0 and .sort(0) rearranged the list to alphabetical order
 
 
@@ -58,7 +59,8 @@ profile = {"username": "queen",
 print(profile["followers"])
 #print (profile[0])
 # Error message: KeyError: 0 (Dictionaries do not use numerical indexes)
-# Keys are like labels and make things easier to find. As for lists, the order matters. And dictionaries look up specific things by name
+#the follower number will print 250, and an error message will print for profile[0]
+# it looks things up by key name because they are unordered, so the values cannot be called by an index number 
 
 
 #Ticket 9
@@ -66,8 +68,8 @@ profile["followers"] = profile["followers"] +50
 profile["bio"] = "Live Laugh Love Life!"
 print(profile)
 print(profile.get("age"))
-# When the key is missing, it prints "None"
-# It's safer because your code won't give you an error message or crash
+# When the key is missing, age will print "None"
+#  .get() is safer than profile["age"] because it won't make the code crash or give an error message
 
 
 #Ticket 10
@@ -75,5 +77,5 @@ profile = {"username":"@queen",
 "followers": 250}
 feed = ["First day at Loop", ...]
 print(f" {profile['username']} has {profile['followers']} followers and {len(feed)} posts. Top post: {feed[0]}")
-# @queen has 250 followers and 3 posts. Top post: First day at Loop
-# I used dictionary for the profile and I used list for the feed
+# it will print @queen has 250 followers and 3 posts. Top post: First day at Loop
+# I used a dictionary for the profile, and I used a list for the feed
